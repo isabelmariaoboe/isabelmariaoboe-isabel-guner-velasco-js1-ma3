@@ -7,11 +7,15 @@ async function getGames () {
 
     const results = await response.json();
 
-    const games = results.all;
+    const games = results.results;
 
-    // test: console.log(results);
+    //console.log(results.results);
     // loop
 
+    for(let i = 0; i < games.length; i++){
+        console.log(games[i].name);
+        console.log(games[i].rating);
+    }
 }
 
 getGames ();
